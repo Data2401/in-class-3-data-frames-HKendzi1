@@ -1,6 +1,6 @@
 ---
 title: "Dataframes - In Class lab"
-author: "Dr. Shoemaker"
+author: "Hannah Kendziora"
 date: "DATA 2401"
 output: html_document
 ---
@@ -38,7 +38,11 @@ US_spend <- data.frame(USPersonalExpenditure)
 
 What are the current column names of your dataframe?
 ```{r}
-
+#Food and Tobacco
+#Household Operation
+#Medical and Health
+#Personal Care
+#Private Education
 ```
 
 
@@ -46,38 +50,42 @@ Consider: why are they so strange? (Think about whether you could use a number l
 
 What are the current row names of your dataframe?
 ```{r}
-
+#X1940
+#X1945
+#X1955
+#X1960
 ```
 
 
 Add a column "Category" to your data frame that contains the rownames
 
 ```{r}
-
+#US_spend$Category<-c("X1940","X1945","X1950","X1955","X1960")
 ```
 
 Consider how this data isn't tidy. Use the `pivot_longer()` function from last class to make the data tidy. 
 
 ```{r}
-
+#pivot_longer(US_spend)
 ```
 
 
 How much money was spent on personal care in 1940?
 ```{r}
-
+#1.040
 ```
 
 
 How much money was spent on Food and Tobacco in 1960?
 ```{r}
-
+#86.80
 
 ```
 
 
 What was the highest expenditure category in 1960?
 ```{r}
+#Food and Tobacco
 
 
 ```
@@ -86,7 +94,7 @@ What was the highest expenditure category in 1960?
 Define a function `lowest_category` that takes in a year as a parameter, and returns the lowest spending category of that year
 ```{r}
 
-
+#lowest_category<- 
 
 ```
 
@@ -99,5 +107,5 @@ Using your function, determine the lowest spending category of each year
 Hint: use the `sapply()` function to apply your function to a vector of years
 
 ```{r}
-
+#sapply(year,lowest_category)
 ```
